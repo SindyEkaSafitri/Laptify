@@ -1,0 +1,169 @@
+.navbar{
+
+    width: 90%;
+
+    max-width: 1300px;
+
+    height: 85px;
+
+    margin: 20px auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 30px;
+
+    border-radius: 20px;
+
+    transition: .4s;
+
+    background: rgba(15,23,42,.65);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+}
+
+.nav-btn{
+    padding: 12px 24px;
+    margin-left: 10px;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu li{
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    line-height: 1;
+}
+
+/* ==========================
+      SCROLL NAVBAR
+========================== */
+
+.header.scrolled .navbar{
+
+    background: rgba(15,23,42,.65);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+}
+
+/* Hamburger */
+.menu-toggle{
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Navbar */
+/* ==========================
+   MOBILE NAVBAR
+========================== */
+
+.menu-toggle{
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width:993px){
+
+    .menu-toggle{
+        display: block;
+    }
+
+    .nav-menu{
+
+        position: fixed;
+
+        top: 110px;
+        left: 5%;
+        right: 5%;
+
+        width: auto;
+
+        background: rgba(15,23,42,.95);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        border: 1px solid rgba(255,255,255,.08);
+        border-radius: 20px;
+
+        padding: 25px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-20px);
+
+        transition: .35s ease;
+    }
+
+    .nav-menu.active{
+
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+
+    }
+
+    .nav-menu li{
+        width:100%;
+    }
+
+    .nav-menu a{
+
+        width:100%;
+
+        justify-content:center;
+
+        padding:12px 0;
+
+    }
+
+    .nav-btn{
+
+        width:100%;
+        margin-left:0;
+
+    }
+
+}

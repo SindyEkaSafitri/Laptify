@@ -1,0 +1,199 @@
+/*==========================
+        HERO
+==========================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    background:rgba(0,229,255,.08);
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    top:80px;
+
+    left:-120px;
+
+    z-index:-1;
+
+}
+
+.hero-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:80px;
+
+}
+
+.hero-content{
+
+    flex:1;
+
+}
+
+.hero-image{
+    position: relative;
+
+    /* flex:1; */
+
+    display:flex;
+
+    justify-content:center;
+    
+    align-items: center;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    max-width:600px;
+
+    animation:floating 5s ease-in-out infinite;
+
+    filter:drop-shadow(
+        0 25px 40px rgba(0,229,255,.35)
+    );
+
+}
+
+.hero-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    background:rgba(0,229,255,.1);
+
+    border:1px solid rgba(0,229,255,.25);
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+.hero h1{
+
+    font-size:72px;
+
+    line-height:1.1;
+
+    font-weight:800;
+
+    margin-bottom:25px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+    color:#bfc3d1;
+
+    line-height:1.8;
+
+    max-width:600px;
+
+}
+
+
+.btn-secondary:hover{
+
+    background:#00E5FF;
+
+    color:#000;
+
+}
+
+.hero-image img{
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-25px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==============================
+        HERO INFO
+==============================*/
+
+.hero-info{
+
+    display:flex;
+
+    gap:40px;
+
+    margin-top:45px;
+
+}
+
+.info-box h3{
+
+    color:var(--primary);
+
+    font-size:32px;
+
+    margin-bottom:8px;
+
+}
+
+.info-box span{
+
+    color:var(--gray);
+
+    font-size:15px;
+
+}

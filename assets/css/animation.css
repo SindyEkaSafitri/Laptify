@@ -1,0 +1,43 @@
+.blur{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    z-index:-1;
+
+}
+
+.blur-1{
+
+    width:350px;
+
+    height:350px;
+
+    background:#00E5FF;
+
+    top:-100px;
+
+    left:-120px;
+
+    opacity:.20;
+
+}
+
+.blur-2{
+
+    width:350px;
+
+    height:350px;
+
+    background:#7B61FF;
+
+    right:-100px;
+
+    bottom:-100px;
+
+    opacity:.18;
+
+}
